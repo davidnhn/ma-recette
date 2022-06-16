@@ -1,0 +1,68 @@
+.pagination {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-primary;
+  gap: 0.8rem;
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.8rem;
+    display: flex;
+    height: 3.6rem;
+    width: 3.6rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: inherit;
+    transition: all 0.3s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: $color-primary;
+    color: $color-secondary-light-2;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.4rem;
+    width: 4.4rem;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid $color-primary;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary;
+
+      & .pagination__icon {
+        stroke: $color-secondary-light-2;
+      }
+    }
+  }
+
+  &__icon {
+    stroke: $color-primary;
+
+    height: 2.4rem;
+    transition: all 0.3s;
+  }
+
+  &__dots {
+    font-size: 1.8rem;
+    display: flex;
+    height: 3.6rem;
+    width: 3.6rem;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+  }
+}

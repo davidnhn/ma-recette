@@ -1,0 +1,36 @@
+.footer {
+  background-color: $color-primary-dark;
+  color: $color-secondary-light-2;
+  padding: 4.8rem 0;
+  margin-top: auto;
+
+  &__logo-box {
+    text-align: center;
+  }
+
+  &__icons-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: -2.4rem;
+    gap: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__icon-link:link,
+  &__icon-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 3rem;
+    transition: all 0.3s;
+  }
+  &__icon-link:hover {
+    transform: scale(1.5);
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}

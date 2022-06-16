@@ -1,0 +1,24 @@
+.carnet {
+  text-align: center;
+  &__titre {
+    font-size: 6.2rem;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 40fr 10fr 40fr;
+    justify-items: center;
+  }
+
+  &__dragndrop {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  &__dotted-arrow {
+    width: 100%;
+    transform: scale(3);
+    margin-bottom: 2.4rem;
+  }
+}

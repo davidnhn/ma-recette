@@ -1,0 +1,16 @@
+.container {
+  padding: 8rem 4.8rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 9.6rem;
+  row-gap: 9.6rem;
+
+  &__col--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__col--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

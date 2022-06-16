@@ -1,0 +1,86 @@
+.subscribe {
+  text-align: center;
+  font-size: 1.8rem;
+  &__title {
+    font-size: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+
+  &__info {
+    margin-bottom: 4.8rem;
+  }
+
+  &__facebook {
+    font-size: 1.8rem;
+    font-weight: 500;
+    border: none;
+    color: #fff;
+    background: none;
+    background-color: #3b5998;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__or {
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+  }
+
+  &__firstname,
+  &__lastname,
+  &__email,
+  &__pseudo,
+  &__password {
+    height: 3rem;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+
+  &__firstname,
+  &__lastname {
+    width: 27.25%;
+  }
+
+  &__email,
+  &__pseudo,
+  &__password {
+    width: 55%;
+  }
+
+  &__info-password {
+    font-size: 1.2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__inscription {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-primary-dark;
+    border: 2px solid $color-primary-dark;
+    display: inline-block;
+    width: 51%;
+    background: none;
+    background-color: $color-secondary-light-2;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 1.2rem 2.4rem;
+    transition: all 0.3s;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: $color-secondary-light-2;
+    }
+  }
+
+  & .error-message {
+    color: #cc0033;
+    font-size: 1.2rem;
+  }
+}

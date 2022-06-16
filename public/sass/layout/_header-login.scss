@@ -1,0 +1,42 @@
+.header-login {
+  background-image: linear-gradient(
+    rgba($color-primary-dark, 1) 0%,
+    rgba($color-primary-dark, 0.9) 90%
+  );
+
+  &__input {
+    position: relative;
+    display: inline-block;
+    width: 70rem;
+    padding: 0.8rem 0 0.8rem 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    &::placeholder {
+      color: #34421e;
+    }
+  }
+
+  & .icon-search {
+    font-size: 3.2rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.6rem;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-secondary-light-2;
+    }
+  }
+
+  &__icon-box {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  }
+}

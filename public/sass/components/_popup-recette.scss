@@ -1,0 +1,199 @@
+.popup-recette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  background-color: rgba(#000, 0.8);
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    @include absCenter;
+    font-size: 1.8rem;
+    padding: 4.8rem 3.2rem;
+    width: 80%;
+    height: 80%;
+    background-color: $color-background;
+    color: inherit;
+    border-radius: 3px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-secondary-light-1;
+      border: 5px solid transparent;
+      border-radius: 8px;
+      background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2rem;
+    }
+  }
+
+  &__titre {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 8rem;
+  }
+
+  &__print {
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+    transform: scale(2);
+    color: inherit;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: inherit;
+      position: absolute;
+      top: 1rem;
+      right: 3.5rem;
+      font-size: 5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-secondary-light-1;
+    }
+  }
+
+  &__description {
+    margin-bottom: 6.4rem;
+  }
+
+  .fa-solid,
+  .fas {
+    font-size: 1.2rem;
+  }
+
+  &__avis {
+    width: 20%;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+
+  &__stars {
+    color: $color-secondary;
+  }
+
+  &__comments {
+    color: $color-secondary-dark-1;
+    text-decoration: underline;
+  }
+
+  &__image-box {
+    width: 20%;
+    margin: 0.8rem auto;
+    text-align: center;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  &__indications {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+
+  &__btn-box {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .fa-heart,
+  .fa-bookmark {
+    transition: all 0.3s;
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: 1.2rem;
+  }
+  &__btn {
+    color: $color-primary;
+    font-size: 1.6rem;
+    width: 40%;
+    border-style: none;
+    padding: 1.6rem 2.4rem;
+    cursor: pointer;
+    // background: none;
+    text-transform: uppercase;
+    background-color: $color-secondary-light-1;
+    border-radius: 50px;
+    margin-bottom: 8rem;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:hover .fa-bookmark,
+    &:hover .fa-heart {
+      font-weight: bold;
+    }
+  }
+
+  &__ingredients,
+  &__preparation {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px dashed $color-primary;
+    border-radius: 20px;
+    background-color: $color-secondary-light-2;
+    padding: 3.2rem 4.8rem;
+  }
+
+  &__preparation-resume {
+    margin-bottom: 1.2rem;
+  }
+
+  &__ingredients {
+    margin-bottom: 6.4rem;
+  }
+
+  &__ingredients-checkbox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.6rem;
+  }
+
+  &__ingredients-titre,
+  &__preparation-titre {
+    font-size: 3rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__steps {
+    &-title {
+      font-size: 2.4rem;
+      margin-bottom: 0.9rem;
+    }
+
+    &--paragraph:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+}
