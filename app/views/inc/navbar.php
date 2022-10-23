@@ -14,7 +14,7 @@
       <div class="header-login__icon-box">
         <input
           type="text"
-          placeholder="Chercher : tarte aux fraises, gâteau au chocolat, gratin dauphinois"
+          placeholder="Chercher : tarte aux fraises, gâteau"
           class="header-login__input"
           />
         <ion-icon class="icon-search" name="search-outline"></ion-icon>

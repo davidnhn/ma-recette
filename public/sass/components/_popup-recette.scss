@@ -81,7 +81,7 @@
   }
 
   &__avis {
-    width: 20%;
+    width: 30%;
     font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
@@ -99,7 +99,7 @@
   }
 
   &__image-box {
-    width: 20%;
+    width: 30%;
     margin: 0.8rem auto;
     text-align: center;
   }
@@ -115,6 +115,10 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 1.2rem;
+  }
+
+  &__qtx {
+    margin-bottom: 2rem;
   }
 
   &__btn-box {

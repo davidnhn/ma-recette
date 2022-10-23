@@ -1,3 +1,17 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +21,15 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 63.75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
@@ -37,8 +60,11 @@ body {
   background-color: #f4f4f0; }
 
 .catalogue {
-  width: 120rem;
+  width: 90%;
   margin: 0 auto; }
+  @media only screen and (max-width: 75em) {
+    .catalogue {
+      width: 100%; } }
 
 .main-login {
   justify-items: center; }
@@ -287,7 +313,7 @@ body {
   .popup-recette .fas {
     font-size: 1.2rem; }
   .popup-recette__avis {
-    width: 20%;
+    width: 30%;
     font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
@@ -299,7 +325,7 @@ body {
     color: #ae852f;
     text-decoration: underline; }
   .popup-recette__image-box {
-    width: 20%;
+    width: 30%;
     margin: 0.8rem auto;
     text-align: center; }
   .popup-recette__img {
@@ -311,6 +337,8 @@ body {
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 1.2rem; }
+  .popup-recette__qtx {
+    margin-bottom: 2rem; }
   .popup-recette__btn-box {
     text-align: center;
     width: 50%;
@@ -478,12 +506,18 @@ body {
   left: 50%;
   transform: translateX(-50%); }
   .hero-box__title {
-    font-size: 5.2rem;
+    font-size: 4.7rem;
     font-weight: 600;
     color: #fff;
     margin-bottom: 1.2rem; }
     .hero-box__title span {
       color: #dabf85; }
+    @media only screen and (max-width: 75em) {
+      .hero-box__title {
+        font-size: 4.4rem; } }
+    @media only screen and (max-width: 63.75em) {
+      .hero-box__title {
+        font-size: 3.6rem; } }
   .hero-box__search {
     position: relative; }
     .hero-box__search input {
@@ -507,7 +541,7 @@ body {
   width: 100%; }
   .main-nav__list {
     list-style: none;
-    font-size: 2.4rem;
+    font-size: 2rem;
     display: flex;
     justify-content: space-between; }
     .main-nav__list-item a:link,
@@ -522,7 +556,7 @@ body {
       .main-nav__list-item a:link::before,
       .main-nav__list-item a:visited::before {
         position: absolute;
-        content: "";
+        content: '';
         bottom: -1rem;
         left: 0;
         width: 0;
@@ -577,7 +611,7 @@ body {
   .header-login__input {
     position: relative;
     display: inline-block;
-    width: 70rem;
+    width: 55rem;
     padding: 0.8rem 0 0.8rem 1.2rem;
     font-size: 1.8rem;
     font-family: inherit;
@@ -586,6 +620,9 @@ body {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
     .header-login__input::placeholder {
       color: #34421e; }
+    @media only screen and (max-width: 63.75em) {
+      .header-login__input {
+        width: 35rem; } }
   .header-login .icon-search {
     font-size: 3.2rem;
     position: absolute;
@@ -610,8 +647,17 @@ body {
   row-gap: 9.6rem; }
   .grid__col--3 {
     grid-template-columns: repeat(3, 1fr); }
+    @media only screen and (max-width: 75em) {
+      .grid__col--3 {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 43.75em) {
+      .grid__col--3 {
+        grid-template-columns: repeat(1, 1fr); } }
   .grid__col--2 {
     grid-template-columns: repeat(2, 1fr); }
+    @media only screen and (max-width: 63.75em) {
+      .grid__col--2 {
+        grid-template-columns: repeat(1, 1fr); } }
 
 .login {
   text-align: center;

@@ -346,9 +346,12 @@
         <div class="popup-recette__ingredients">
           <h3 class="popup-recette__ingredients-titre">Ingrédients</h3>
           <div class="popup-recette__ingredients-personnes">
-            <span>-</span>
-            <p><span>8</span> personnes</p>
+            <p class="popup-recette__qtx">
+              <span>-</span>
+              
+            <span>8</span> personnes
             <span>+</span>
+          </p>
           </div>
           <div class="popup-recette__ingredients-checkbox">
             <div>

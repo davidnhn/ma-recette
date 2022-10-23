@@ -5,13 +5,22 @@
   transform: translateX(-50%);
 
   &__title {
-    font-size: 5.2rem;
+    font-size: 4.7rem;
     font-weight: 600;
     color: $color-white;
     margin-bottom: 1.2rem;
 
     span {
       color: $color-secondary-light-1;
+    }
+
+    @include respond(tab-land) {
+      // width < 1320?
+      font-size: 4.4rem;
+    }
+    @include respond(tab-port) {
+      // width < 1020?
+      font-size: 3.6rem;
     }
   }
 

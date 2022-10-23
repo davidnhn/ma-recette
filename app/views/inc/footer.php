@@ -40,6 +40,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="<?=URLROOT?>/js/script.js"></script>
+    <script type="module"  src="<?=URLROOT?>/js/script.js"></script>
   </body>
 </html>

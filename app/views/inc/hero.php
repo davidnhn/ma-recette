@@ -21,7 +21,7 @@
           <div class="header__search">
             <input
               type="text"
-              placeholder="Chercher : tarte aux fraises, gâteau au chocolat, gratin dauphinois"
+              placeholder="Chercher : tarte aux fraises ..."
               />
               <ion-icon class="icon-search" name="search-outline"></ion-icon>
           </div>
@@ -51,7 +51,7 @@
         <div class="hero-box__search">
           <input
           type="text"
-          placeholder="Chercher : tarte aux fraises, gâteau au chocolat, gratin dauphinois"
+          placeholder="Chercher : tarte aux fraises, gâteau"
           />
           <ion-icon class="icon-search" name="search-outline"></ion-icon>
         </div>

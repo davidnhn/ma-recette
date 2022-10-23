@@ -9,8 +9,20 @@
 
   &__col--3 {
     grid-template-columns: repeat(3, 1fr);
+    @include respond(tab-land) {
+      // width < 1320?
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      // width < 1320?
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__col--2 {
     grid-template-columns: repeat(2, 1fr);
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
