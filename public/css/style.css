@@ -166,7 +166,8 @@ body {
     background-image: linear-gradient(#000, #000); }
     .card__picture img {
       width: 100%;
-      transition: all 1s; }
+      transition: all 1s;
+      cursor: pointer; }
     .card__picture-icons {
       position: absolute;
       font-size: 2.4rem;
@@ -260,14 +261,11 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  opacity: 0;
-  visibility: hidden;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s; }
-  .popup-recette:target {
-    opacity: 1;
-    visibility: visible; }
+  .popup-recette .hidden {
+    display: none; }
   .popup-recette__content {
     position: absolute;
     top: 50%;

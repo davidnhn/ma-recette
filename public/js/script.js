@@ -1,23 +1,3 @@
-import {
-  searchRecipes,
-  MarmitonQueryBuilder,
-  RECIPE_PRICE,
-  RECIPE_DIFFICULTY,
-  Recipe,
-} from './node_modules/marmiton-api/dist/types/marmiton-api';
-const qb = new MarmitonQueryBuilder();
-// A query builder is provided to make complex queries
-const query = qb
-  .withTitleContaining('soja')
-  .withoutOven()
-  .withPrice(RECIPE_PRICE.CHEAP)
-  .takingLessThan(45)
-  .withDifficulty(RECIPE_DIFFICULTY.EASY)
-  .build();
-// Fetch the recipes
-const recipes = await searchRecipes(query);
-console.log(recipes);
-
 const navbar = document.querySelector('.header');
 const navbarHeight = navbar.getBoundingClientRect().height;
 const hero = document.querySelector('.hero');
@@ -48,3 +28,35 @@ const heroObserver = new IntersectionObserver(stickyNav, {
 });
 
 heroObserver.observe(hero);
+
+/* ===============================================
+
+        *MODAL
+
+   ===============================================*/
+
+const recipe = document.querySelectorAll('.picture-click');
+
+const modal = document.querySelector('.popup-recette');
+
+const btnCloseModal = document.querySelector('.popup-recette__close');
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+};
+
+btnCloseModal.addEventListener('click', closeModal);
+for (let i = 0; i < recipe.length; i++)
+  recipe[i].addEventListener('click', openModal);
+
+document.addEventListener('keydown', function (e) {
+  // console.log(e.key);
+
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
